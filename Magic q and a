@@ -1,0 +1,39 @@
+import random 
+
+answers=['I dont know please ask another question','I am doing good and how about you','It my pleasure','Please go before it too late','luckly to have you here','I am sorry']
+
+print('  __  __          _____ _____ _____    ___  ')
+print(' |  \/  |   /\   / ____|_   _/ ____|  / _ \ ')
+print(' | \  / |  /  \ | |  __  | || |      | (_) |')
+print(' | |\/| | / /\ \| | |_ | | || |       > _ < ')
+print(' | |  | |/ ____ \ |__| |_| || |____  | (_) |')
+print(' |_|  |_/_/    \_\_____|_____\_____|  \___/ ')
+print('')
+print('')
+print('')
+
+print('Hello I am Magic 8, Please free to ask any questions, Please help me with your name first')
+
+name= input()
+
+print('Hello  ' + name)
+
+def magicball8():
+    print('Please ask any question')
+    input()
+    print (answers[random.randint(0,len(answers)-1)])
+    print('I hope I have helped you')
+    replay()
+    
+def replay():
+    print("Do you any other question? [Y/N]")
+    replay = input()
+    if replay== 'Y':
+        magicball8()
+    elif replay== 'N':
+        exit()
+    else:
+        print('Sorry, I couldnt Helped you')
+        replay()
+        
+magicball8()
